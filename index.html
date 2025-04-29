@@ -1,11 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pengukur Bouw Kelompok 11</title>
+    <title>Kelompok 11 Konversi Bouw to Meter</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    
+<body align="center">
+
+    <div id="loading">
+        <img src="loading.gif" alt="Loading...">
+        <p>Loading...</p>
+    </div>
+
+    <div id="main-content-convert">
+    <h2>Konversi Bouw ⇄ Meter Persegi</h2>
+
+    <input type="angka" id="inputNilai" placeholder="Masukkan nilai" required>
+    <br><br>
+
+    <button id="TombolBouwKeMeter" onclick="setModeBouwToMeter()">Mode: Bouw ke M²</button>
+    <button id="TombolMeterKeBouw" onclick="setModeMeterToBouw()">Mode: M² ke Bouw</button>
+    <br><br>
+
+    <button onclick="convert()">Convert</button>
+
+    <p id="currentMode"><em>Mode saat ini: Bouw ke M²</em></p>
+    <p id="result"></p>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
