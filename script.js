@@ -1,5 +1,13 @@
 let mode = "bouwToMeter"; // Default 
 
+function NoNegativeInput(inputId) {
+    document.getElementById(inputId).addEventListener('input', function() {
+        if (this.value < 0) {
+          this.value = 0;  
+        }
+      });
+    }
+
 function updateButtonState() {
     const btnBouw = document.getElementById("TombolBouwKeMeter");
     const btnMeter = document.getElementById("TombolMeterKeBouw");
@@ -44,3 +52,4 @@ function convert() {
 }
 
 updateButtonState();
+NoNegativeInput('inputNilai');

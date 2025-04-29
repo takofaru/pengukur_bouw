@@ -13,9 +13,9 @@
     </div>
 
     <div id="main-content-convert">
-    <h2>Konversi Bouw ⇄ Meter Persegi</h2>
+    <h2>Konversi Bouw ⇄ M²</h2>
 
-    <input type="number" id="inputNilai" placeholder="Masukkan nilai" required>
+    <input type="number" id="inputNilai" placeholder="Masukkan nilai" min="0" required>
     <br><br>
 
     <button id="TombolBouwKeMeter" onclick="setModeBouwToMeter()">Mode: Bouw ke M²</button>
@@ -23,10 +23,17 @@
     <br><br>
 
     <button onclick="convert()">Convert</button>
-
     <p id="currentMode"><em>Mode saat ini: Bouw ke M²</em></p>
+    
     <p id="result"></p>
     </div>
+
+    <!-- Tbh, I dont know where to put this.
+    <<footer>Catatan
+        <p id="Note1"><em>Saat memasukkan angka desimal, pastikan menggunakan tanda "." bukan koma ","</em></p>
+        <p id="Note2"><em>Tidak ada angka negatif, jika memasukkan input negatif maka otomatis input akan berubah menjadi 0</em></p>
+    </footer>>
+-->
 
     <script src="script.js"></script>
 </body>
