@@ -143,7 +143,6 @@ button:hover {
     font-size: 2.6vmin;
 }
 
-/* Tablet responsiveness */
 @media (max-width: 768px) {
     .main {
       gap: 18px;
@@ -186,53 +185,62 @@ button:hover {
     }
   }
   
-  /* Phone responsiveness */
   @media (max-width: 480px) {
-    .content {
-      padding: 3vmin;
-      font-size: 2.5vmin;
-    }
-  
     .main {
-      gap: 16px;
+      padding: 6vmin;
+      gap: 20px;
     }
   
     .title img {
       width: 80vmin;
-      font-size: 6vmin;
     }
   
-    input {
-      font-size: 4vmin;
-      padding: 2vmin 4vmin;
+    .title {
+      font-size: 8vmin;
+    }
+  
+    .input,
+    .selector {
+      flex-direction: column;
+      gap: 12px;
+      width: 100%;
+      align-items: center;
     }
   
     input[type=number] {
       width: 90vw;
+      font-size: 5vmin;
+      padding: 2.5vmin 4vmin;
     }
   
-    .process.active {
-      width: 80vmin;
-    }
-  
-    .done h2 {
+    .convert-btn {
       font-size: 4.5vmin;
-      padding: 2vmin 4vmin;
+      padding: 2vmin 5vmin;
+    }
+  
+    .selector button {
+      font-size: 4.5vmin;
+      padding: 2vmin 5vmin;
     }
   
     .note {
-      font-size: 2vmin;
+      font-size: 2.5vmin;
       text-align: center;
+      padding: 2vmin;
+    }
+  
+    .done h2 {
+      font-size: 6vmin;
     }
   
     .material-symbols-rounded {
-      font-size: 3vmin;
+      font-size: 5vmin;
     }
   
     .foot {
       flex-direction: column;
-      align-items: center;
       gap: 2vmin;
+      align-items: center;
     }
   }
   
