@@ -1,35 +1,41 @@
-let mode = "bouwToMeter"; // Default 
+let isKeMeter = true;
+let isMute = false;
+const btnBouw = document.getElementById("keBouw");
+const btnMeter = document.getElementById("keMeter");
+const processDiv = document.getElementById("process");
+const doneDiv = document.getElementById("done");
+const music = document.getElementById("music");
+const sound = document.getElementById("bgSound");
+
 
 function NoNegativeInput(inputId) {
     document.getElementById(inputId).addEventListener('input', function() {
         if (this.value < 0) {
           this.value = 0;  
         }
-      });
-    }
+    });
+}
 
 function updateButtonState() {
-    const btnBouw = document.getElementById("TombolBouwKeMeter");
-    const btnMeter = document.getElementById("TombolMeterKeBouw");
 
-    if (mode === "bouwToMeter") {
-        btnBouw.disabled = true;
-        btnMeter.disabled = false;
+    if (isKeMeter === true) {
+        btnMeter.classList.remove("disabled");
+        btnBouw.classList.add("disabled");
     } else {
-        btnBouw.disabled = false;
-        btnMeter.disabled = true;
+        btnMeter.classList.add("disabled");
+        btnBouw.classList.remove("disabled");
     }
 }
 
-function setModeBouwToMeter() {
-    mode = "bouwToMeter";
-    document.getElementById("currentMode").innerText = "Mode saat ini: Bouw ke M²";
+function setMeter() {
+    isKeMeter = true;
+    console.log("True")
     updateButtonState();
 }
 
-function setModeMeterToBouw() {
-    mode = "meterToBouw";
-    document.getElementById("currentMode").innerText = "Mode saat ini: M² ke Bouw";
+function setBouw() {
+    isKeMeter = false;
+    console.log("False")
     updateButtonState();
 }
 
@@ -39,15 +45,37 @@ function convert() {
 
     if (isNaN(value)) {
         resultElement.innerText = "Masukkan angka yang valid.";
+        processDiv.classList.remove("active");
         return;
     }
 
-    if (mode === "bouwToMeter") {
-        const meter = value * 7096.5;
-        resultElement.innerText = `${value} bouw = ${meter.toFixed(2)} m²`;
+    doneDiv.classList.remove("active");
+    processDiv.classList.add("active");
+
+    setTimeout(function () {
+        processDiv.classList.remove("active");
+        doneDiv.classList.add("active");
+
+        if (isKeMeter === true) {
+            const meter = value * 7096.5;
+            resultElement.innerText = `${value} bouw = ${meter.toFixed(2)} m²`;
+        } else {
+            const bouw = value / 7096.5;
+            resultElement.innerText = `${value} m² = ${bouw.toFixed(4)} bouw`;
+        }
+
+    }, 5000);
+}
+
+function toggleMusic() {
+    if (isMute === false) {
+        isMute = true;
+        music.value = "music_off";
+        sound.muted = true;
     } else {
-        const bouw = value / 7096.5;
-        resultElement.innerText = `${value} m² = ${bouw.toFixed(4)} bouw`;
+        isMute = false;
+        music.value = "music_note";
+        sound.muted = false;
     }
 }
 
