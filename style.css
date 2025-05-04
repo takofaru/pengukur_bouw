@@ -135,7 +135,7 @@ button:hover {
 }
 
 .note {
-    font-size: 1.8vmin;
+    font-size: 1.3vmin;
     font-style: italic;
 }
 
@@ -143,7 +143,6 @@ button:hover {
     font-size: 2.6vmin;
 }
 
-/* Tablet responsiveness */
 @media (max-width: 768px) {
     .content {
         padding: 4vmin;
@@ -198,7 +197,6 @@ button:hover {
     }
 }
 
-/* Phone responsiveness */
 @media (max-width: 480px) {
     .content {
         padding: 3vmin;
