@@ -53,7 +53,7 @@ button:hover {
 .content {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 100%;
     padding: 5.927vmin;
     box-sizing: border-box;
     font-size: 2vmin;
@@ -143,3 +143,96 @@ button:hover {
     font-size: 2.6vmin;
 }
 
+/* Tablet responsiveness */
+@media (max-width: 768px) {
+    .main {
+      gap: 18px;
+      padding: 4vmin;
+    }
+  
+    .title img {
+      width: 60vmin;
+      font-size: 7vmin;
+    }
+  
+    .input,
+    .selector {
+      flex-direction: column;
+      width: 100%;
+      gap: 8px;
+      align-items: center;
+    }
+  
+    input[type=number] {
+      width: 80vw;
+    }
+  
+    .process.active {
+      width: 60vmin;
+    }
+  
+    .done h2 {
+      font-size: 5vmin;
+    }
+  
+    .foot {
+      flex-direction: column;
+      gap: 1vmin;
+      align-items: center;
+    }
+  
+    .note {
+      text-align: center;
+    }
+  }
+  
+  /* Phone responsiveness */
+  @media (max-width: 480px) {
+    .content {
+      padding: 3vmin;
+      font-size: 2.5vmin;
+    }
+  
+    .main {
+      gap: 16px;
+    }
+  
+    .title img {
+      width: 80vmin;
+      font-size: 6vmin;
+    }
+  
+    input {
+      font-size: 4vmin;
+      padding: 2vmin 4vmin;
+    }
+  
+    input[type=number] {
+      width: 90vw;
+    }
+  
+    .process.active {
+      width: 80vmin;
+    }
+  
+    .done h2 {
+      font-size: 4.5vmin;
+      padding: 2vmin 4vmin;
+    }
+  
+    .note {
+      font-size: 2vmin;
+      text-align: center;
+    }
+  
+    .material-symbols-rounded {
+      font-size: 3vmin;
+    }
+  
+    .foot {
+      flex-direction: column;
+      align-items: center;
+      gap: 2vmin;
+    }
+  }
+  

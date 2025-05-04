@@ -16,7 +16,8 @@
                     <p>Konversi Bouw ke Meter Persegi</p>
                 </div>
                 <div class="input">
-                    <input type="number" id="inputNilai" min="0" placeholder="Masukkan Angka" required>
+                    <input type="number" id="inputNilai" min="0" placeholder="Masukkan Angka" required
+                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\../g, '$1');">
                     <input type="button" onclick="convert()" value="Konversi">
                 </div>
                 <div class="selector">
