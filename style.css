@@ -27,11 +27,6 @@ input {
     background-color: #B1DD9E;
 }
 
-.disabled {
-    background-color: #7A9F79;
-    color: white;
-}
-
 input[type=number] {
     width: 58vw;
     background-color: white;
@@ -86,6 +81,7 @@ button:hover {
 .title img {
     font-family: "Gloock", serif;
     font-size: 8.8vmin;
+    width: 55.2vmin;
 }
 
 .input, .selector {
@@ -100,6 +96,11 @@ button:hover {
 
 .selector {
     gap: 0;
+}
+
+.disabled {
+    background-color: #7A9F79;
+    color: white;
 }
 
 .process, .done {
