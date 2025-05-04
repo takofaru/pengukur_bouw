@@ -44,6 +44,7 @@ function convert() {
     const resultElement = document.getElementById("result");
 
     if (isNaN(value)) {
+        doneDiv.classList.add("active");
         resultElement.innerText = "Masukkan angka yang valid.";
         processDiv.classList.remove("active");
         return;

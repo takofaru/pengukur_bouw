@@ -53,7 +53,7 @@ button:hover {
 .content {
     display: flex;
     flex-direction: column;
-    min-height: 100%;
+    min-height: 100vh;
     padding: 5.927vmin;
     box-sizing: border-box;
     font-size: 2vmin;
@@ -143,104 +143,112 @@ button:hover {
     font-size: 2.6vmin;
 }
 
+/* Tablet responsiveness */
 @media (max-width: 768px) {
+    .content {
+        padding: 4vmin;
+        font-size: 2.2vmin;
+    }
+
     .main {
-      gap: 18px;
-      padding: 4vmin;
+        gap: 20px;
     }
-  
+
     .title img {
-      width: 60vmin;
-      font-size: 7vmin;
+        width: 60vmin;
+        font-size: 6vmin;
     }
-  
-    .input,
-    .selector {
-      flex-direction: column;
-      width: 100%;
-      gap: 8px;
-      align-items: center;
+
+    input {
+        font-size: 3vmin;
+        padding: 1.5vmin 3vmin;
     }
-  
+
     input[type=number] {
-      width: 80vw;
+        width: 80%;
     }
-  
+
+    input[type=button] {
+        font-size: 3vmin;
+    }
+
     .process.active {
-      width: 60vmin;
+        width: 60vmin;
     }
-  
+
     .done h2 {
-      font-size: 5vmin;
+        font-size: 5vmin;
+        padding: 1.5vmin 3vmin;
     }
-  
-    .foot {
-      flex-direction: column;
-      gap: 1vmin;
-      align-items: center;
-    }
-  
+
     .note {
-      text-align: center;
+        font-size: 1.8vmin;
+        text-align: center;
     }
-  }
-  
-  @media (max-width: 480px) {
-    .main {
-      padding: 6vmin;
-      gap: 20px;
-    }
-  
-    .title img {
-      width: 80vmin;
-    }
-  
-    .title {
-      font-size: 8vmin;
-    }
-  
-    .input,
-    .selector {
-      flex-direction: column;
-      gap: 12px;
-      width: 100%;
-      align-items: center;
-    }
-  
-    input[type=number] {
-      width: 90vw;
-      font-size: 5vmin;
-      padding: 2.5vmin 4vmin;
-    }
-  
-    .convert-btn {
-      font-size: 4.5vmin;
-      padding: 2vmin 5vmin;
-    }
-  
-    .selector button {
-      font-size: 4.5vmin;
-      padding: 2vmin 5vmin;
-    }
-  
-    .note {
-      font-size: 2.5vmin;
-      text-align: center;
-      padding: 2vmin;
-    }
-  
-    .done h2 {
-      font-size: 6vmin;
-    }
-  
+
     .material-symbols-rounded {
-      font-size: 5vmin;
+        font-size: 3vmin;
     }
-  
+
     .foot {
-      flex-direction: column;
-      gap: 2vmin;
-      align-items: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 2vmin;
     }
-  }
+}
+
+/* Phone responsiveness */
+@media (max-width: 480px) {
+    .content {
+        padding: 3vmin;
+        font-size: 2vmin;
+    }
+
+    .main {
+        gap: 16px;
+    }
+
+    .title img {
+        width: 70vmin;
+        font-size: 5vmin;
+    }
+
+    input {
+        font-size: 3.5vmin;
+        padding: 1.5vmin 3vmin;
+    }
+
+    input[type=number] {
+        width: 90%;
+    }
+
+    input[type=button] {
+        font-size: 3.5vmin;
+    }
+
+    .process.active {
+        width: 70vmin;
+    }
+
+    .done h2 {
+        font-size: 4.5vmin;
+        padding: 1.5vmin 3vmin;
+    }
+
+    .note {
+        font-size: 2.2vmin;
+        text-align: center;
+    }
+
+    .material-symbols-rounded {
+        font-size: 2.5vmin;
+    }
+
+    .foot {
+        flex-direction: column;
+        align-items: center;
+        gap: 3vmin;
+        font-size: 4vmin;
+    }
+}
   
