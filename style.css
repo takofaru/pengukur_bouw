@@ -66,8 +66,7 @@ button:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
-    gap: 24px;
-    margin-bottom: -4vmin;
+    gap: 2vmin;
 }
 
 .title {
